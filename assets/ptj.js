@@ -177,3 +177,13 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+function viewAndDownload() {
+  // View the resume in a new tab
+  window.open('https://drive.google.com/file/d/1LrYbTTnCjdvVHNBb6mu5KaOihMtogmPH/view?usp=sharing', '_blank');
+
+  // Download the resume
+  var link = document.createElement('a');
+  link.href = 'https://drive.google.com/uc?export=download&id=1LrYbTTnCjdvVHNBb6mu5KaOihMtogmPH';
+  link.download = 'Piyush_Hardasani_Resume.pdf'; // You can specify the filename here
+  link.click();
+}
